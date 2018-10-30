@@ -1,0 +1,36 @@
+<div *ngIf="!question">Loading...</div>
+<div class="card" *ngIf="question">
+  <div class="card-body">
+    <app-question-info [question]="question"></app-question-info>
+    <div class="card-text">
+      <app-vote [(userVote)]="question.userVote" [(score)]="question.score" (voted)="questionVote($event)"></app-vote>
+      <button type="button" class="btn btn-light float-right">{{question.date | date}}</button>
+    </div>
+    <br />
+    <app-tag-list [tags]="question.tags"></app-tag-list>
+    <button type="button" *ngIf="question.user" class="btn btn-info float-right">{{question.user.name}} ({{question.user.reputation}})</button>
+    <div class="card-body" *ngIf="!question.user">Loading...</div>
+  </div>
+</div>
+<br>
+<h6 *ngIf="question">{{question.answerCount}} Answers</h6>
+<hr />
+<div *ngIf="!answers">Loading...</div>
+<div class="card" *ngFor="let answer of answers">
+  <div class="card-body">
+    <p class="card-text font-italic">{{answer.body}}</p>
+    <div class="card-text">
+      <app-vote [(userVote)]="answer.userVote" [(score)]="answer.score" (voted)="answerVote(answer, $event)"></app-vote>
+      <button type="button" class="btn btn-light float-right">{{answer.date | date}}</button>
+    </div>
+    <br />
+    <button type="button" *ngIf="answer.user" class="btn btn-info float-right">{{answer.user.name}} ({{answer.user.reputation}})</button>
+    <div class="card-body" *ngIf="!answer.user">Loading...</div>
+  </div>
+</div>
+<br>
+<hr>
+<app-form-group [label]="'Your Answer'" [name]="'answer'">
+  <textarea class="form-control" [(ngModel)]="answer.body" id="answer" placeholder="Answer"></textarea>
+</app-form-group>
+<button type="button" (click)="saveAnswer()" class="btn btn-primary">Post Your Answer</button>

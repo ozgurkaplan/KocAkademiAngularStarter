@@ -1,0 +1,17 @@
+<div class="card" *ngFor="let question of questions">
+  <div class="card-body">
+    <a [routerLink]="'/question/detail/'+ question.id" >
+      <h5 class="card-title">{{question.title}}</h5>
+      <p class="card-text">{{question.body}}</p>
+      <p class="card-text"><button type="button" class="btn btn-light btn-sm" *ngFor="let tag of question.tags">{{tag}}</button></p>
+    </a>
+    <br>
+    <p class="card-text">
+        <button type="button" class="btn btn-light">Votes <span class="badge badge-info">{{question.score}}</span></button>
+        <button type="button" class="btn btn-light">Answers <span class="badge badge-info">{{question.answerCount}}</span></button>
+        <button type="button" class="btn btn-light">{{question.date | date}}</button>
+        <button type="button" *ngIf="question.user" class="btn btn-info float-right">{{question.user.name}} ({{question.user.reputation}})</button>
+    </p>
+    <div class="card-body" *ngIf="!question.user">Loading...</div>
+  </div>
+</div>

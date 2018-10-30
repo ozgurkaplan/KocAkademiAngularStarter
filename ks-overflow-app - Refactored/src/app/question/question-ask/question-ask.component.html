@@ -1,0 +1,10 @@
+<app-form-group [name]="'title'" [label]="'Title'">
+  <input type="text" class="form-control" id="title" [(ngModel)]="question.title" placeholder="What's your programming question? Be specific.">
+</app-form-group>
+<app-form-group [name]="'body'" [label]="'Body'">
+  <textarea class="form-control" id="body" [(ngModel)]="question.body" placeholder="Description"></textarea>
+</app-form-group>
+<app-form-group [name]="'tags'" [label]="'Tags'">
+  <input type="text" class="form-control" id="tags" [(ngModel)]="tags" placeholder="e.g. (angularjs mongodb javascript)">
+</app-form-group>
+<button type="button" (click)="askQuestion()" class="btn btn-primary">Post Your Question</button>

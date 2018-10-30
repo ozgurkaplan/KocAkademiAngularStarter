@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <a [routerLink]="'/question/detail/'+ question.id">
+      <app-question-info [question]="question"></app-question-info>
+      <p class="card-text">
+        <app-tag-list [tags]="question.tags"></app-tag-list>
+      </p>
+    </a>
+    <br>
+    <p class="card-text">
+      <app-question-info-detail [question]="question"></app-question-info-detail>
+    </p>
+    <div class="card-body" *ngIf="!question.user">Loading...</div>
+  </div>
+</div>

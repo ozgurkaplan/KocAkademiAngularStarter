@@ -1,0 +1,9 @@
+<div class="jumbotron" *ngIf="user">
+    <h1 class="display-4">{{user.name}}</h1>
+    <p class="lead">{{user.description}}</p>
+    <hr class="my-4">
+    <p>
+      <app-tag-list [tags]="user.tags"></app-tag-list>
+      <button type="button" class="btn btn-info float-right">Reputation <b>{{user.reputation}}</b></button>
+    </p>
+  </div>

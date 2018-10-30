@@ -1,0 +1,48 @@
+<p *ngIf="!user">Loading...</p>
+<div class="jumbotron" *ngIf="user">
+  <h1 class="display-4">{{user.name}}</h1>
+  <p class="lead">{{user.description}}</p>
+  <hr class="my-4">
+  <p>
+    <button type="button" class="btn btn-light btn-sm" *ngFor="let tag of user.tags">{{tag}}</button>
+    <button type="button" class="btn btn-info float-right">Reputation <b>{{user.reputation}}</b></button>
+  </p>
+</div>
+<p>Questions</p>
+<hr />
+<div class="card" *ngFor="let question of questions">
+    <div class="card-body">
+      <a [routerLink]="'/question/detail/'+ question.id" >
+        <h5 class="card-title">{{question.title}}</h5>
+        <p class="card-text">{{question.body}}</p>
+        <p class="card-text"><button type="button" class="btn btn-light btn-sm" *ngFor="let tag of question.tags">{{tag}}</button></p>
+      </a>
+      <br>
+      <p class="card-text">
+          <button type="button" class="btn btn-light">Votes <span class="badge badge-info">{{question.score}}</span></button>
+          <button type="button" class="btn btn-light">Answers <span class="badge badge-info">{{question.answerCount}}</span></button>
+          <button type="button" class="btn btn-light">{{question.date | date}}</button>
+          <button type="button" *ngIf="question.user" class="btn btn-info float-right">{{question.user.name}} ({{question.user.reputation}})</button>
+      </p>
+      <div class="card-body" *ngIf="!question.user">Loading...</div>
+    </div>
+  </div>
+<p>Answers</p>
+<hr />
+<div class="card" *ngFor="let question of answeredQuestions">
+    <div class="card-body">
+      <a [routerLink]="'/question/detail/'+ question.id" >
+        <h5 class="card-title">{{question.title}}</h5>
+        <p class="card-text">{{question.body}}</p>
+        <p class="card-text"><button type="button" class="btn btn-light btn-sm" *ngFor="let tag of question.tags">{{tag}}</button></p>
+      </a>
+      <br>
+      <p class="card-text">
+          <button type="button" class="btn btn-light">Votes <span class="badge badge-info">{{question.score}}</span></button>
+          <button type="button" class="btn btn-light">Answers <span class="badge badge-info">{{question.answerCount}}</span></button>
+          <button type="button" class="btn btn-light">{{question.date | date}}</button>
+          <button type="button" *ngIf="question.user" class="btn btn-info float-right">{{question.user.name}} ({{question.user.reputation}})</button>
+      </p>
+      <div class="card-body" *ngIf="!question.user">Loading...</div>
+    </div>
+  </div>

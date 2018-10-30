@@ -1,0 +1,9 @@
+<div class="btn-group">
+    <button type="button" *ngIf="userVote===1" class="btn btn-primary">+</button>
+    <button type="button" *ngIf="userVote===0" class="btn btn-light" (click)="vote(1)">+</button>
+    <button type="button" *ngIf="userVote===-1" class="btn">+</button>
+    <button type="button" class="btn">{{score}}</button>
+    <button type="button" *ngIf="userVote===-1" class="btn btn-primary">-</button>
+    <button type="button" class="btn btn-light" *ngIf="userVote===0" (click)="vote(-1)">-</button>
+    <button type="button" *ngIf="userVote===1" class="btn">-</button>
+  </div>

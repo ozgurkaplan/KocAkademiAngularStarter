@@ -1,0 +1,210 @@
+{
+  "questions": [
+    {
+      "id": "138a98f1-29e4-4c4c-a10a-b2f833d667db",
+      "title": "Test Question?",
+      "tags": [
+        "angular",
+        "json"
+      ],
+      "body": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium?",
+      "score": 1,
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "answerCount": 2,
+      "hasAccepted": false,
+      "date": 1539950901263
+    },
+    {
+      "id": "8a05cf71-84f4-4043-af93-0547d6213933",
+      "title": "Sample Question?",
+      "tags": [
+        "angular",
+        "json"
+      ],
+      "body": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium?",
+      "score": 3,
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "answerCount": 2,
+      "hasAccepted": false,
+      "date": 1539864545000
+    },
+    {
+      "userId": "dd70f365-c8d9-422e-a02d-39d3d20c5452",
+      "title": "What is best programming language?",
+      "body": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium?",
+      "tags": [
+        "language"
+      ],
+      "answerCount": 2,
+      "date": 1540041117984,
+      "hasAccepted": false,
+      "score": 6,
+      "id": "519bef43-ba86-4205-8ad1-84ca8a0f8470"
+    }
+  ],
+  "users": [
+    {
+      "id": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "userName": "ozgur",
+      "name": "Ozgur Kaplan",
+      "reputation": 1321,
+      "password": 123,
+      "description": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium.",
+      "tags": [
+        "angular",
+        "c#",
+        "python"
+      ]
+    },
+    {
+      "id": "dd70f365-c8d9-422e-a02d-39d3d20c5452",
+      "name": "John Doe",
+      "userName": "john",
+      "reputation": 985209,
+      "password": 123,
+      "description": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium.",
+      "tags": [
+        "sql",
+        "f#"
+      ]
+    },
+    {
+      "id": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "name": "Jane Doe",
+      "userName": "jane",
+      "reputation": 9976643,
+      "password": 123,
+      "description": "Lorem ipsum dolor sit amet, dicit integre postulant at has. Ei lucilius molestiae tincidunt est. No eum prima solet. Ne ferri elitr nec, quo natum dicunt impetus ea. Quem nisl detracto sit ex. Ferri malis est eu, per ea detraxit posidonium.",
+      "tags": [
+        "oracle",
+        "java"
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "371a7849-0237-4395-99cd-e51759282027",
+      "body": "Is that a trick question?",
+      "userId": "dd70f365-c8d9-422e-a02d-39d3d20c5452",
+      "score": 1,
+      "isCorrect": true,
+      "questionId": "138a98f1-29e4-4c4c-a10a-b2f833d667db",
+      "date": 1521338945000
+    },
+    {
+      "id": "31ea26bd-5e27-41dc-8138-b410f7aebc40",
+      "body": "I would just try again.",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "score": -1,
+      "isCorrect": false,
+      "questionId": "138a98f1-29e4-4c4c-a10a-b2f833d667db",
+      "date": 1516586945000
+    },
+    {
+      "id": "e7fe8af2-12d0-4325-810b-442288943eb9",
+      "isCorrect": false,
+      "score": 0,
+      "body": "Haskell",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "questionId": "519bef43-ba86-4205-8ad1-84ca8a0f8470",
+      "date": 1540472030376
+    },
+    {
+      "id": "7791f5fc-6cb6-452d-afd2-d4b3ace9fd03",
+      "isCorrect": false,
+      "score": 0,
+      "body": "Python",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "questionId": "519bef43-ba86-4205-8ad1-84ca8a0f8470",
+      "date": 1540472045178
+    },
+    {
+      "id": "80a9b2f4-e6eb-42e8-a8a6-a3131a149417",
+      "isCorrect": false,
+      "score": 0,
+      "body": "Sample answer",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "questionId": "8a05cf71-84f4-4043-af93-0547d6213933",
+      "date": 1540889872162
+    },
+    {
+      "id": "6db879cb-6be6-4cba-a50a-7efb89939b7a",
+      "isCorrect": false,
+      "score": 0,
+      "body": "sample question answer",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "questionId": "8a05cf71-84f4-4043-af93-0547d6213933",
+      "date": 1540890077999
+    }
+  ],
+  "answerVotes": [
+    {
+      "id": "e9c9f690-ec2f-4e93-81e5-f1030188fcee",
+      "answerId": "7791f5fc-6cb6-452d-afd2-d4b3ace9fd03",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "vote": 1
+    },
+    {
+      "id": "1f30b72b-53a5-446e-8510-5f9703dc71ba",
+      "answerId": "e7fe8af2-12d0-4325-810b-442288943eb9",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "vote": -1
+    },
+    {
+      "id": "d1ee8003-9889-40da-976b-e6133c5bfcba",
+      "answerId": "371a7849-0237-4395-99cd-e51759282027",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "vote": -1
+    },
+    {
+      "id": "83bc4b6b-c3a8-44cf-b85e-f4a4943c6b6d",
+      "answerId": "31ea26bd-5e27-41dc-8138-b410f7aebc40",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "vote": -1
+    },
+    {
+      "id": "c76ceb20-210c-4dbb-9f0a-e67aa0dcb250",
+      "answerId": "80a9b2f4-e6eb-42e8-a8a6-a3131a149417",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "vote": -1
+    },
+    {
+      "id": "8f114184-f6aa-4178-889b-fc96212ab7a0",
+      "answerId": "80a9b2f4-e6eb-42e8-a8a6-a3131a149417",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "vote": -1
+    },
+    {
+      "id": "0a136106-32e9-4811-a215-f0e5f6f37c2a",
+      "answerId": "6db879cb-6be6-4cba-a50a-7efb89939b7a",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "vote": 1
+    }
+  ],
+  "questionVotes": [
+    {
+      "id": "73cb8121-f1a2-4bdc-ad26-5a02d0341ff1",
+      "questionId": "138a98f1-29e4-4c4c-a10a-b2f833d667db",
+      "userId": "2af82e1e-72ce-4dde-a0d5-54ffdc5b4ff0",
+      "vote": 1
+    },
+    {
+      "id": "333491aa-2d22-4a5a-938a-156abd0c5b3f",
+      "questionId": "8a05cf71-84f4-4043-af93-0547d6213933",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "vote": 1
+    },
+    {
+      "id": "e62889dd-d0ba-4500-af2f-21680eaa586b",
+      "questionId": "519bef43-ba86-4205-8ad1-84ca8a0f8470",
+      "userId": "dd70f365-c8d9-422e-a02d-39d3d20c5452",
+      "vote": -1
+    },
+    {
+      "id": "b270fc7b-50b1-4d65-8f69-ccb5f12a453b",
+      "questionId": "8a05cf71-84f4-4043-af93-0547d6213933",
+      "userId": "ed13b5be-f5a9-4e61-936a-f28995683d82",
+      "vote": 1
+    }
+  ]
+}

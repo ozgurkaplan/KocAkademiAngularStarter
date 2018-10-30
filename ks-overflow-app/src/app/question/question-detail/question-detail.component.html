@@ -1,0 +1,56 @@
+<div *ngIf="!question">Loading...</div>
+<div class="card" *ngIf="question">
+  <div class="card-body">
+    <h5 class="card-title">{{question.title}}</h5>
+    <p class="card-text">{{question.body}}</p>
+    <div class="card-text">
+      <div class="btn-group">
+        <button type="button" *ngIf="question.userVote===1" class="btn btn-primary">+</button>
+        <button type="button" *ngIf="question.userVote===0" class="btn btn-light" (click)="questionVote(1)">+</button>
+        <button type="button" *ngIf="question.userVote===-1" class="btn">+</button>
+        <button type="button" class="btn">{{question.score}}</button>
+        <button type="button" *ngIf="question.userVote===-1" class="btn btn-primary">-</button>
+        <button type="button" class="btn btn-light" *ngIf="question.userVote===0" (click)="questionVote(-1)">-</button>
+        <button type="button" *ngIf="question.userVote===1" class="btn">-</button>
+      </div>
+      <button type="button" class="btn btn-light float-right">{{question.date | date}}</button>
+    </div>
+    <br />
+    <button type="button" class="btn btn-light" *ngFor="let tag of question.tags">{{tag}}</button>
+    <button type="button" *ngIf="question.user" class="btn btn-info float-right">{{question.user.name}} ({{question.user.reputation}})</button>
+    <div class="card-body" *ngIf="!question.user">Loading...</div>
+  </div>
+</div>
+<br>
+<h6 *ngIf="question">{{question.answerCount}} Answers</h6>
+<hr />
+<div *ngIf="!answers">Loading...</div>
+<div class="card" *ngFor="let answer of answers">
+  <div class="card-body">
+    <p class="card-text font-italic">{{answer.body}}</p>
+    <div class="card-text">
+      <div class="btn-group">
+        <button type="button" *ngIf="answer.userVote===1" class="btn btn-primary">+</button>
+        <button type="button" class="btn btn-light" *ngIf="answer.userVote===0" (click)="answerVote(answer, 1)">+</button>
+        <button type="button" *ngIf="answer.userVote===-1" class="btn">+</button>
+        <button type="button" class="btn">{{answer.score}}</button>
+        <button type="button" class="btn btn-primary" *ngIf="answer.userVote===-1">-</button>
+        <button type="button" class="btn btn-light" *ngIf="answer.userVote===0" (click)="answerVote(answer, -1)">-</button>
+        <button type="button" class="btn" *ngIf="answer.userVote===1">-</button>
+      </div>
+      <button type="button" class="btn btn-light float-right">{{answer.date | date}}</button>
+    </div>
+    <br />
+    <button type="button" *ngIf="answer.user" class="btn btn-info float-right">{{answer.user.name}} ({{answer.user.reputation}})</button>
+    <div class="card-body" *ngIf="!answer.user">Loading...</div>
+  </div>
+</div>
+<br>
+<hr>
+<div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Your Answer</label>
+    <textarea class="form-control" [(ngModel)]="answer.body" id="exampleInputPassword1" placeholder="Answer"></textarea>
+  </div>
+  <button type="button" (click)="saveAnswer()" class="btn btn-primary">Post Your Answer</button>
+</div>
